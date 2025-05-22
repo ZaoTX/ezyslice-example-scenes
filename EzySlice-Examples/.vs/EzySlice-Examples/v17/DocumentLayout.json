@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|d:\\ezyslice-example-scenes\\ezyslice-examples\\assets\\scripts\\slicemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\slicemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|D:\\ezyslice-example-scenes\\EzySlice-Examples\\assets\\ezyslice\\slicedhull.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|solutionrelative:assets\\ezyslice\\slicedhull.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|d:\\ezyslice-example-scenes\\ezyslice-examples\\assets\\scripts\\cutobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cutobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|D:\\ezyslice-example-scenes\\EzySlice-Examples\\assets\\examples\\scripts\\planeusageexample.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|solutionrelative:assets\\examples\\scripts\\planeusageexample.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|D:\\ezyslice-example-scenes\\EzySlice-Examples\\assets\\ezyslice\\slicerextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|solutionrelative:assets\\ezyslice\\slicerextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SliceManager.cs",
+              "DocumentMoniker": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\Scripts\\SliceManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SliceManager.cs",
+              "ToolTip": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\Scripts\\SliceManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SliceManager.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T11:55:01.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CutObj.cs",
+              "DocumentMoniker": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\Scripts\\CutObj.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CutObj.cs",
+              "ToolTip": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\Scripts\\CutObj.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CutObj.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T11:45:01.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlaneUsageExample.cs",
+              "DocumentMoniker": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\Examples\\Scripts\\PlaneUsageExample.cs",
+              "RelativeDocumentMoniker": "Assets\\Examples\\Scripts\\PlaneUsageExample.cs",
+              "ToolTip": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\Examples\\Scripts\\PlaneUsageExample.cs",
+              "RelativeToolTip": "Assets\\Examples\\Scripts\\PlaneUsageExample.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAgwCwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T11:14:50.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SlicedHull.cs",
+              "DocumentMoniker": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\SlicedHull.cs",
+              "RelativeDocumentMoniker": "Assets\\EzySlice\\SlicedHull.cs",
+              "ToolTip": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\SlicedHull.cs",
+              "RelativeToolTip": "Assets\\EzySlice\\SlicedHull.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T10:32:34.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SlicerExtensions.cs",
+              "DocumentMoniker": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\SlicerExtensions.cs",
+              "RelativeDocumentMoniker": "Assets\\EzySlice\\SlicerExtensions.cs",
+              "ToolTip": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\SlicerExtensions.cs",
+              "RelativeToolTip": "Assets\\EzySlice\\SlicerExtensions.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAADwvwwAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T11:19:45.534Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
