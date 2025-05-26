@@ -1,16 +1,35 @@
-EzySlice-Examples/Library/
-EzySlice-Examples/Temp/
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
 
+# User-specific
 *.csproj
-
+*.unityproj
 *.sln
-
+*.suo
+*.tmp
+*.user
 *.userprefs
+*.pidb
+*.booproj
+*.svd
 
-\.DS_Store
+# OS-specific
+.DS_Store
+*.swp
+*.swo
+Thumbs.db
 
-EzySlice-Examples/obj/Debug/
+# Crashlytics (if used)
+crashlytics-build.properties
 
-EzySlice-Examples/Logs/
+# Rider
+.idea/
+*.sln.iml
 
-EzySlice-Examples/\.vscode/
+# VS Code
+.vscode/
