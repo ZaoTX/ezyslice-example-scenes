@@ -3,7 +3,19 @@
   "WorkspaceRootPath": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|d:\\ezyslice-example-scenes\\ezyslice-examples\\assets\\scripts\\slicemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|D:\\ezyslice-example-scenes\\EzySlice-Examples\\assets\\ezyslice\\slicer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|solutionrelative:assets\\ezyslice\\slicer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|D:\\ezyslice-example-scenes\\EzySlice-Examples\\assets\\ezyslice\\framework\\triangulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|solutionrelative:assets\\ezyslice\\framework\\triangulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|D:\\ezyslice-example-scenes\\EzySlice-Examples\\assets\\ezyslice\\framework\\intersectionresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|solutionrelative:assets\\ezyslice\\framework\\intersectionresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|D:\\ezyslice-example-scenes\\EzySlice-Examples\\assets\\scripts\\slicemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\slicemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,8 +23,12 @@
       "RelativeMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|solutionrelative:assets\\ezyslice\\slicedhull.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|d:\\ezyslice-example-scenes\\ezyslice-examples\\assets\\scripts\\cutobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cutobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|D:\\ezyslice-example-scenes\\EzySlice-Examples\\assets\\ezyslice\\framework\\intersector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|solutionrelative:assets\\ezyslice\\framework\\intersector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|D:\\ezyslice-example-scenes\\EzySlice-Examples\\assets\\ezyslice\\framework\\triangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|solutionrelative:assets\\ezyslice\\framework\\triangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C0A2CC8-CEA5-944D-D4A7-70F6AC1CAF04}|Assembly-CSharp.csproj|D:\\ezyslice-example-scenes\\EzySlice-Examples\\assets\\examples\\scripts\\planeusageexample.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,32 +51,70 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Slicer.cs",
+              "DocumentMoniker": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\Slicer.cs",
+              "RelativeDocumentMoniker": "Assets\\EzySlice\\Slicer.cs",
+              "ToolTip": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\Slicer.cs",
+              "RelativeToolTip": "Assets\\EzySlice\\Slicer.cs",
+              "ViewState": "AgIAANgAAAAAAAAAAAAuwPYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T11:29:43.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IntersectionResult.cs",
+              "DocumentMoniker": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\Framework\\IntersectionResult.cs",
+              "RelativeDocumentMoniker": "Assets\\EzySlice\\Framework\\IntersectionResult.cs",
+              "ToolTip": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\Framework\\IntersectionResult.cs",
+              "RelativeToolTip": "Assets\\EzySlice\\Framework\\IntersectionResult.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAmwGAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T11:00:21.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Triangle.cs",
+              "DocumentMoniker": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\Framework\\Triangle.cs",
+              "RelativeDocumentMoniker": "Assets\\EzySlice\\Framework\\Triangle.cs",
+              "ToolTip": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\Framework\\Triangle.cs",
+              "RelativeToolTip": "Assets\\EzySlice\\Framework\\Triangle.cs",
+              "ViewState": "AgIAADsBAAAAAAAAAAD4v8UAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T10:58:51.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Triangulator.cs",
+              "DocumentMoniker": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\Framework\\Triangulator.cs",
+              "RelativeDocumentMoniker": "Assets\\EzySlice\\Framework\\Triangulator.cs",
+              "ToolTip": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\Framework\\Triangulator.cs",
+              "RelativeToolTip": "Assets\\EzySlice\\Framework\\Triangulator.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAmwC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T10:58:31.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SliceManager.cs",
               "DocumentMoniker": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\Scripts\\SliceManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SliceManager.cs",
               "ToolTip": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\Scripts\\SliceManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\SliceManager.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBAAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAmwBEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T11:55:01.683Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CutObj.cs",
-              "DocumentMoniker": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\Scripts\\CutObj.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CutObj.cs",
-              "ToolTip": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\Scripts\\CutObj.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CutObj.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T11:45:01.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "PlaneUsageExample.cs",
               "DocumentMoniker": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\Examples\\Scripts\\PlaneUsageExample.cs",
               "RelativeDocumentMoniker": "Assets\\Examples\\Scripts\\PlaneUsageExample.cs",
@@ -72,20 +126,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "SlicedHull.cs",
               "DocumentMoniker": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\SlicedHull.cs",
               "RelativeDocumentMoniker": "Assets\\EzySlice\\SlicedHull.cs",
               "ToolTip": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\SlicedHull.cs",
               "RelativeToolTip": "Assets\\EzySlice\\SlicedHull.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAiwAoAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T10:32:34.603Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
+              "Title": "Intersector.cs",
+              "DocumentMoniker": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\Framework\\Intersector.cs",
+              "RelativeDocumentMoniker": "Assets\\EzySlice\\Framework\\Intersector.cs",
+              "ToolTip": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\Framework\\Intersector.cs",
+              "RelativeToolTip": "Assets\\EzySlice\\Framework\\Intersector.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAASwDgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T11:09:33.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "SlicerExtensions.cs",
               "DocumentMoniker": "D:\\ezyslice-example-scenes\\EzySlice-Examples\\Assets\\EzySlice\\SlicerExtensions.cs",
               "RelativeDocumentMoniker": "Assets\\EzySlice\\SlicerExtensions.cs",
