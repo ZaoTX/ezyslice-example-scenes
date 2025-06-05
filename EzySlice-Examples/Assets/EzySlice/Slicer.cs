@@ -244,7 +244,6 @@ namespace EzySlice {
             for (int i = 0; i < slices.Length; i++) {
                 // check if at least one of the submeshes was sliced. If so, stop checking
                 // because we need to go through the generation step
-
                 if (slices[i] != null && slices[i].isValid) {
                     return CreateFrom(slices, CreateFrom(crossHull, pl.normal, region), crossIndex);
                 }
