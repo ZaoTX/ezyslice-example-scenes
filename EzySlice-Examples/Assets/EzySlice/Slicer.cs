@@ -476,6 +476,9 @@ namespace EzySlice {
          */
         private static List<Triangle> CreateFrom(List<Vector3> intPoints, Vector3 planeNormal, TextureRegion region) {
             Debug.Log("Call MonotoneChain Once");
+            // Before calling MonotoneChain you should first check the closed contour for intPoints
+            // and do like for each contour in contours, call MonotoneChain
+            // and return a list of list triangle
             return Triangulator.MonotoneChain(intPoints, planeNormal, out List<Triangle> tris, region) ? tris : null;
         }
     }

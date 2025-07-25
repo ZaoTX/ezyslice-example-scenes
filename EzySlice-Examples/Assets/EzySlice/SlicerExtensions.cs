@@ -62,14 +62,12 @@ namespace EzySlice {
             Vector3 refUp = inv.MultiplyVector(direction).normalized;
             Vector3 refPt = obj.transform.InverseTransformPoint(position);
 
-            cuttingPlane.Compute(refPt, refUp);
-
+            cuttingPlane.Compute(refPt, refUp); 
             return SliceInstantiate(obj, cuttingPlane, cuttingRegion, crossSectionMaterial);
         }
 
         public static GameObject[] SliceInstantiate(this GameObject obj, Plane pl, TextureRegion cuttingRegion, Material crossSectionMaterial = null) {
-            SlicedHull slice = Slicer.Slice(obj, pl, cuttingRegion, crossSectionMaterial);
-
+            SlicedHull slice = Slicer.Slice(obj, pl, cuttingRegion, crossSectionMaterial); 
             if (slice == null) {
                 return null;
             }

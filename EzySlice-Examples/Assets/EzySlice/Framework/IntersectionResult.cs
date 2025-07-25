@@ -26,6 +26,9 @@ namespace EzySlice {
         private int lower_hull_count;
         private int intersection_pt_count;
 
+        // contour ID 
+        int contourID = 0;//I will try to find out the closed contour
+
         public IntersectionResult() {
             this.is_success = false;
 
@@ -36,6 +39,9 @@ namespace EzySlice {
             this.upper_hull_count = 0;
             this.lower_hull_count = 0;
             this.intersection_pt_count = 0;
+
+            this.contourID = 0;
+
         }
 
         public Triangle[] upperHull {
@@ -64,6 +70,16 @@ namespace EzySlice {
 
         public bool isValid {
             get { return is_success; }
+        }
+
+        public int getContourID
+        {
+            get { return contourID; }
+        }
+        public IntersectionResult AddContourID(int ID) 
+        { 
+            this.contourID = ID;
+            return this;
         }
 
         /**

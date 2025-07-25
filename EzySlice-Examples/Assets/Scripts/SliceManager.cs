@@ -24,6 +24,7 @@ public class SliceManager : MonoBehaviour
     void CutObject(GameObject victim) {
         if (victim != null) {
             SlicedHull hull = victim.Slice(slicePlane.transform.position, slicePlane.transform.up);
+            //SlicedHull hull = victim.Slice(slicePlane.transform.position, slicePlane.transform.up);
             if (hull != null)
             {
                 GameObject upperHull = hull.CreateUpperHull(victim);
@@ -40,6 +41,7 @@ public class SliceManager : MonoBehaviour
         {
             CutObject(victim);
         }
+        slicePlane.SetActive(false);
 
     }
 
