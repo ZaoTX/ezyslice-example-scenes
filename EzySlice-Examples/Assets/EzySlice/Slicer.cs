@@ -225,12 +225,9 @@ namespace EzySlice {
                         {
                             mesh.lowerHull.Add(result.lowerHull[i]);
                         }
-
-
                         if (interHullCount != 2)
                         {
                             Debug.Log("Something went wrong, there should be 2 intersection points.");
-
                         }
                         else
                         {
@@ -285,6 +282,7 @@ namespace EzySlice {
                 // because we need to go through the generation step
                 if (slices[i] != null && slices[i].isValid)
                 {
+                    crossHull.SelfCheck();
                     return CreateFrom(slices, CreateFrom(crossHull.vertices, pl.normal, region), crossIndex);
                 }
             }
@@ -650,8 +648,17 @@ namespace EzySlice {
             // Before calling MonotoneChain you should first check the closed contour for intPoints
             // and do like for each contour in contours, call MonotoneChain
             // and return a list of list triangle
-           List<Triangle> allTriangles = new List<Triangle>();
-
+            List<Triangle> allTriangles = new List<Triangle>();
+            Debug.Log("number of contours: " + intPoints.Count);
+            //List<Vector3> allPoints = new List<Vector3>();
+            // foreach (List<Vector3> contour in intPoints)
+            // {
+            //     allPoints.AddRange(contour);
+            // }
+            // if (Triangulator.MonotoneChain(allPoints, planeNormal, out List<Triangle> tris, region))
+            // {
+            //     allTriangles.AddRange(tris);
+            // }
             foreach (List<Vector3> contour in intPoints)
             {
                 if (Triangulator.MonotoneChain(contour, planeNormal, out List<Triangle> tris, region))
@@ -659,10 +666,10 @@ namespace EzySlice {
                     allTriangles.AddRange(tris);
                 }
                 else
-                { 
+                {
                     Debug.Log("MonotonChain failed");
                 }
-                 
+
             }
 
             return allTriangles;

@@ -98,7 +98,7 @@ namespace EzySlice {
                     newShared[shared.Length] = crossSectionMat;
                 }
                 else
-                {
+                { 
                     Material material_ori = original.GetComponent<Renderer>().material;
                     newShared[shared.Length] = material_ori;
                 }

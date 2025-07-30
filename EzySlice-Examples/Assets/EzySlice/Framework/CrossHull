@@ -39,37 +39,18 @@ public class CrossHull
         }
         foreach (int id in notEnClosedContoursID)
         {
-            Debug.Log("Represent Point" + vertices[id][0] + " Contour ID: " + id);
+            Debug.Log("Represent Point"+vertices[id][0] + " Contour ID: " + id);
         }
         // if(notEnClosedContoursID.Count!=0){
         //     List<Vector3> newContour = new List<Vector3>();
         //     foreach (int id in notEnClosedContoursID)
         //     {
-
-        //         newContour.AddRange(vertices[id]);
-
+        //         if(id!=8){
+        //             newContour.AddRange(vertices[id]);
+        //         }
         //     }
         //     AddContour(newContour);
         // }
-        if(notEnClosedContoursID.Count!=0){
-            List<Vector3> newContour = new List<Vector3>();
-            foreach (int id in notEnClosedContoursID)
-            {
-               
-                foreach (Vector3 point in vertices[id])
-                {
-                    for(int i = 0; i < notEnClosedContoursID.Count; i++)
-                    {
-                        if(vertices[i].Contains(point))
-                        {
-                            Debug.Log("Point " + point + " is part of Contour " + i);
-                        }
-                    }
-                }
-                
-            }
-            AddContour(newContour);
-        }
     }
     
     //before adding vertices, check if the vertices belong to the existing contour
@@ -123,18 +104,17 @@ public class CrossHull
         if (index1 != -1)
         {
             vertices[index1].Add(v2);
-            
+            continue;
         }
         //if one of the vertices belongs to the existing contour, add the other vertex to it
-        else if (index2 != -1)
+        if (index2 != -1)
         {
             vertices[index2].Add(v1);
-             
-        }else
-        {// otherwise just add a new contour
-            List<Vector3> newContour = new List<Vector3> { v1, v2 };
-            AddContour(newContour);
+            return;
         }
+        // otherwise just add a new contour
+        List<Vector3> newContour = new List<Vector3> { v1, v2 };
+        AddContour(newContour);
     }
 
 }
