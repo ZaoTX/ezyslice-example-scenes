@@ -41,22 +41,21 @@ public class SliceManager : MonoBehaviour
             }
         }
     }
-    private void OnDrawGizmos()
-    {
-        EzySlice.Plane plane = new EzySlice.Plane(slicePlane.transform.position,slicePlane.transform.up);
-        convexHull = Slicer.GetConvexHull(testObj_shardmesh,plane);
-        if (convexHull != null)
-        {
-            foreach (Vector3 point in convexHull)
-            {
-                Gizmos.DrawSphere(point, 0.1f);
-            }
-        }
-        else {
-            testObj_shardmesh = testObj.GetComponent<MeshFilter>().sharedMesh;
-            Debug.Log("null");
-        }
-    }
+    // private void OnDrawGizmos()
+    // {
+    //     EzySlice.Plane plane = new EzySlice.Plane(slicePlane.transform.position,slicePlane.transform.up);
+    //     convexHull = Slicer.GetConvexHull(testObj_shardmesh,plane);
+    //     if (convexHull != null)
+    //     {
+    //         foreach (Vector3 point in convexHull)
+    //         {
+    //             Gizmos.DrawSphere(point, 0.1f);
+    //         }
+    //     }
+    //     else {
+    //         testObj_shardmesh = testObj.GetComponent<MeshFilter>().sharedMesh; 
+    //     }
+    // }
     void CutAllChildren() { 
         List<GameObject> children = getChildren();
         foreach (GameObject victim in children)

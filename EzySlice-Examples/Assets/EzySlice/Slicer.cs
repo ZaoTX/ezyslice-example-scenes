@@ -160,7 +160,8 @@ namespace EzySlice {
             // each submesh will be sliced and placed in its own array structure
             SlicedSubmesh[] slices = new SlicedSubmesh[submeshCount];
             // the cross section hull is common across all submeshes
-            List<Vector3> crossHull = new List<Vector3>();
+            //List<Vector3> crossHull = new List<Vector3>();
+            CrossHull crossHull = new CrossHull();
 
             // we reuse this object for all intersection tests
             IntersectionResult result = new IntersectionResult();
@@ -225,9 +226,17 @@ namespace EzySlice {
                             mesh.lowerHull.Add(result.lowerHull[i]);
                         }
 
-                        for (int i = 0; i < interHullCount; i++)
+
+                        if (interHullCount != 2)
                         {
-                            crossHull.Add(result.intersectionPoints[i]);
+                            Debug.Log("Something went wrong, there should be 2 intersection points.");
+
+                        }
+                        else
+                        {
+                            Vector3 v1 = result.intersectionPoints[0];
+                            Vector3 v2 = result.intersectionPoints[1];
+                            crossHull.AddVertices(v1, v2);
                         }
                     }
                     else
@@ -276,7 +285,7 @@ namespace EzySlice {
                 // because we need to go through the generation step
                 if (slices[i] != null && slices[i].isValid)
                 {
-                    return CreateFrom(slices, CreateFrom(crossHull, pl.normal, region), crossIndex);
+                    return CreateFrom(slices, CreateFrom(crossHull.vertices, pl.normal, region), crossIndex);
                 }
             }
 
@@ -636,12 +645,27 @@ namespace EzySlice {
          * Generate Two Meshes (an upper and lower) cross section from a set of intersection
          * points and a plane normal. Intersection Points do not have to be in order.
          */
-        private static List<Triangle> CreateFrom(List<Vector3> intPoints, Vector3 planeNormal, TextureRegion region) {
+        private static List<Triangle> CreateFrom(List<List<Vector3>> intPoints, Vector3 planeNormal, TextureRegion region) {
             
             // Before calling MonotoneChain you should first check the closed contour for intPoints
             // and do like for each contour in contours, call MonotoneChain
             // and return a list of list triangle
-            return Triangulator.MonotoneChain(intPoints, planeNormal, out List<Triangle> tris, region) ? tris : null;
+           List<Triangle> allTriangles = new List<Triangle>();
+
+            foreach (List<Vector3> contour in intPoints)
+            {
+                if (Triangulator.MonotoneChain(contour, planeNormal, out List<Triangle> tris, region))
+                {
+                    allTriangles.AddRange(tris);
+                }
+                else
+                { 
+                    Debug.Log("MonotonChain failed");
+                }
+                 
+            }
+
+            return allTriangles;
         }
     }
 }
