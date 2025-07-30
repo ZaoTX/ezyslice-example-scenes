@@ -5,6 +5,19 @@ using UnityEngine;
 namespace EzySlice {
 
     /**
+     * Helper class to group intersection points by contour ID
+     */
+    internal class ContourGroup {
+        public int contourId;
+        public List<Vector3> points;
+
+        public ContourGroup(int id) {
+            contourId = id;
+            points = new List<Vector3>();
+        }
+    }
+
+    /**
      * Contains methods for slicing GameObjects
      */
     public sealed class Slicer {

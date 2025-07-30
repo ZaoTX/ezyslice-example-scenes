@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,28 +20,28 @@ namespace EzySlice {
         // our intersection points/triangles
         private readonly Triangle[] upper_hull;
         private readonly Triangle[] lower_hull;
-        private readonly Vector3[] intersection_pt;
+        private readonly Vector3[] intersection_pt; 
 
         // our counters. We use raw arrays for performance reasons
         private int upper_hull_count;
         private int lower_hull_count;
         private int intersection_pt_count;
 
-        // contour ID 
-        int contourID = 0;//I will try to find out the closed contour
+        // contour ID - for tracking which contour each intersection point belongs to
+        private int current_contour_id;
 
         public IntersectionResult() {
             this.is_success = false;
 
             this.upper_hull = new Triangle[2];
             this.lower_hull = new Triangle[2];
-            this.intersection_pt = new Vector3[2];
+            this.intersection_pt = new Vector3[2]; 
 
             this.upper_hull_count = 0;
             this.lower_hull_count = 0;
             this.intersection_pt_count = 0;
 
-            this.contourID = 0;
+            this.current_contour_id = 0;
 
         }
 
@@ -55,6 +56,7 @@ namespace EzySlice {
         public Vector3[] intersectionPoints {
             get { return intersection_pt; }
         }
+ 
 
         public int upperHullCount {
             get { return upper_hull_count; }
@@ -72,13 +74,14 @@ namespace EzySlice {
             get { return is_success; }
         }
 
-        public int getContourID
+        public int currentContourID
         {
-            get { return contourID; }
+            get { return current_contour_id; }
         }
-        public IntersectionResult AddContourID(int ID) 
+        
+        public IntersectionResult SetContourID(int ID) 
         { 
-            this.contourID = ID;
+            this.current_contour_id = ID;
             return this;
         }
 
@@ -111,7 +114,17 @@ namespace EzySlice {
          * which is shared by both upper->lower hulls
          */
         public void AddIntersectionPoint(Vector3 pt) {
-            intersection_pt[intersection_pt_count++] = pt;
+            intersection_pt[intersection_pt_count] = pt; 
+            intersection_pt_count++;
+        }
+
+        /**
+         * Used by the intersector, adds a new intersection point with specific contour ID
+         * which is shared by both upper->lower hulls
+         */
+        public void AddIntersectionPoint(Vector3 pt, int contourId) {
+            intersection_pt[intersection_pt_count] = pt; 
+            intersection_pt_count++;
         }
 
         /**
