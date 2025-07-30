@@ -7,6 +7,13 @@ public class SliceManager : MonoBehaviour
 {
     public GameObject parentObj;
     public GameObject slicePlane;
+    public GameObject testObj;
+    Mesh testObj_shardmesh;
+    List<Vector3> convexHull = new List<Vector3>();
+    private void Start()
+    {
+        testObj_shardmesh = testObj.GetComponent<MeshFilter>().sharedMesh;
+    }
     List<GameObject> getChildren() {
         List<GameObject> children = new List<GameObject>();
 
@@ -34,7 +41,22 @@ public class SliceManager : MonoBehaviour
             }
         }
     }
-
+    private void OnDrawGizmos()
+    {
+        EzySlice.Plane plane = new EzySlice.Plane(slicePlane.transform.position,slicePlane.transform.up);
+        convexHull = Slicer.GetConvexHull(testObj_shardmesh,plane);
+        if (convexHull != null)
+        {
+            foreach (Vector3 point in convexHull)
+            {
+                Gizmos.DrawSphere(point, 0.1f);
+            }
+        }
+        else {
+            testObj_shardmesh = testObj.GetComponent<MeshFilter>().sharedMesh;
+            Debug.Log("null");
+        }
+    }
     void CutAllChildren() { 
         List<GameObject> children = getChildren();
         foreach (GameObject victim in children)

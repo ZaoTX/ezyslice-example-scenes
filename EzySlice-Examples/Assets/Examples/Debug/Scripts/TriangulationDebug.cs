@@ -29,15 +29,30 @@ public class TriangulationDebug : MonoBehaviour {
 
 		if (pt.Count < 3) {
 			return;
-		}
-
+		} 
 		List<Triangle> tri;
 
 		// perform triangulation
 		if (Triangulator.MonotoneChain(pt, Vector3.up, out tri)) {
 			
 			for (int i = 0; i < tri.Count; i++) {
-				tri[i].OnDebugDraw(Color.yellow);
+                if (i == 0)
+                {
+                    tri[i].OnDebugDraw(Color.blue);
+                    continue;
+
+                }
+                if (i == 1)
+                {
+                    tri[i].OnDebugDraw(Color.red);
+                    continue;
+                }
+                if (i == tri.Count-1)
+                {
+                    tri[i].OnDebugDraw(Color.green);
+                    continue;
+                }
+                tri[i].OnDebugDraw(Color.yellow);
 			}
 		}
 	}
