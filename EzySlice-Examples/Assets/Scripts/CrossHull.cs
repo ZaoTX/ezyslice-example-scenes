@@ -36,34 +36,7 @@ public class CrossHull
                 notEnClosedContoursID.Add(i);
                 Debug.Log("Contour " + i + " is not closed!");
             }
-        }
-        // foreach (int id in notEnClosedContoursID)
-        // {
-        //     Debug.Log("Represent Point" + vertices[id][0] + " Contour ID: " + id);
-        // }
-        // if(notEnClosedContoursID.Count!=0){
-        //     List<Vector3> newContour = new List<Vector3>();
-        //     foreach (int id in notEnClosedContoursID)
-        //     {
-
-        //         newContour.AddRange(vertices[id]);
-
-        //     }
-        //     AddContour(newContour);
-        // }
-        if(notEnClosedContoursID.Count!=0){
-            List<Vector3> newContour = new List<Vector3>();
-            foreach (int id in notEnClosedContoursID)
-            {
-               
-                foreach (Vector3 point in vertices[id])
-                {
-                    Debug.Log("Point from contour " + id + ": " + point);
-                }
-                
-            }
-            AddContour(newContour);
-        }
+        } 
     }
      
     //before adding vertices, check if the vertices belong to the existing contour
@@ -76,27 +49,17 @@ public class CrossHull
         for (int i = 0; i < vertices.Count; i++)
         {
             if (vertices[i].Contains(v1))
-            {
-                if (index1 != -1)
-                {
-                    Debug.Log("Vertex " + v1 + " is part of Contour " + index1);
-                }
+            { 
                 index1 = i;
             }
             if (vertices[i].Contains(v2))
-            {
-                if (index2 != -1)
-                {
-                    Debug.Log("Vertex " + v2 + " is part of Contour " + index2);
-                }
+            { 
                 index2 = i;
             }
         }
         // if both vertices belong to the same contour then the contour will be closed, good!
         if (index1 != -1 && index1 == index2)
-        {
-            Debug.Log("Both vertices belong to the same contour, this contour is closed!");
-            Debug.Log("Contour ID: " + index1);
+        { 
             isClosing[index1] = true; // set the contour as closed
             return;
         }
@@ -108,9 +71,7 @@ public class CrossHull
 
             vertices[keep].AddRange(vertices[merge]);
             vertices.RemoveAt(merge);
-            isClosing.RemoveAt(merge);
-            Debug.Log("This Edge connects two contours, merging them!");
-            Debug.Log("Contour1: " + index1 + " Contour2: " + index2);
+            isClosing.RemoveAt(merge); 
             return;
         }
         //if one of the vertices belongs to the existing contour, add the other vertex to it

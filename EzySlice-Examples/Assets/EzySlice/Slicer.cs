@@ -648,17 +648,7 @@ namespace EzySlice {
             // Before calling MonotoneChain you should first check the closed contour for intPoints
             // and do like for each contour in contours, call MonotoneChain
             // and return a list of list triangle
-            List<Triangle> allTriangles = new List<Triangle>();
-            Debug.Log("number of contours: " + intPoints.Count);
-            //List<Vector3> allPoints = new List<Vector3>();
-            // foreach (List<Vector3> contour in intPoints)
-            // {
-            //     allPoints.AddRange(contour);
-            // }
-            // if (Triangulator.MonotoneChain(allPoints, planeNormal, out List<Triangle> tris, region))
-            // {
-            //     allTriangles.AddRange(tris);
-            // }
+            List<Triangle> allTriangles = new List<Triangle>(); 
             foreach (List<Vector3> contour in intPoints)
             {
                 if (Triangulator.MonotoneChain(contour, planeNormal, out List<Triangle> tris, region))
