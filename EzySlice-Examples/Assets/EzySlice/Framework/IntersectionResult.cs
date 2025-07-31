@@ -114,10 +114,19 @@ namespace EzySlice {
          * which is shared by both upper->lower hulls
          */
         public void AddIntersectionPoint(Vector3 pt) {
+            pt = RoundVector(pt); // round the point to avoid precision issues
             intersection_pt[intersection_pt_count] = pt; 
             intersection_pt_count++;
         }
-
+        // precision rounding for intersection points
+        Vector3 RoundVector(Vector3 v, float precision = 0.001f)
+        {
+            return new Vector3(
+                Mathf.Round(v.x / precision) * precision,
+                Mathf.Round(v.y / precision) * precision,
+                Mathf.Round(v.z / precision) * precision
+            );
+        }
         /**
          * Used by the intersector, adds a new intersection point with specific contour ID
          * which is shared by both upper->lower hulls

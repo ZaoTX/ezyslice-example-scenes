@@ -37,10 +37,10 @@ public class CrossHull
                 Debug.Log("Contour " + i + " is not closed!");
             }
         }
-        foreach (int id in notEnClosedContoursID)
-        {
-            Debug.Log("Represent Point" + vertices[id][0] + " Contour ID: " + id);
-        }
+        // foreach (int id in notEnClosedContoursID)
+        // {
+        //     Debug.Log("Represent Point" + vertices[id][0] + " Contour ID: " + id);
+        // }
         // if(notEnClosedContoursID.Count!=0){
         //     List<Vector3> newContour = new List<Vector3>();
         //     foreach (int id in notEnClosedContoursID)
@@ -58,20 +58,14 @@ public class CrossHull
                
                 foreach (Vector3 point in vertices[id])
                 {
-                    for(int i = 0; i < notEnClosedContoursID.Count; i++)
-                    {
-                        if(vertices[i].Contains(point))
-                        {
-                            Debug.Log("Point " + point + " is part of Contour " + i);
-                        }
-                    }
+                    Debug.Log("Point from contour " + id + ": " + point);
                 }
                 
             }
             AddContour(newContour);
         }
     }
-    
+     
     //before adding vertices, check if the vertices belong to the existing contour
     //Here we assume each time we add only two vertices
     public void AddVertices(Vector3 v1, Vector3 v2)
@@ -101,8 +95,8 @@ public class CrossHull
         // if both vertices belong to the same contour then the contour will be closed, good!
         if (index1 != -1 && index1 == index2)
         {
-            // Debug.Log("Both vertices belong to the same contour, this contour is closed!");
-            // Debug.Log("Contour ID: " + index1);
+            Debug.Log("Both vertices belong to the same contour, this contour is closed!");
+            Debug.Log("Contour ID: " + index1);
             isClosing[index1] = true; // set the contour as closed
             return;
         }
@@ -130,7 +124,8 @@ public class CrossHull
         {
             vertices[index2].Add(v1);
              
-        }else
+        }
+        else
         {// otherwise just add a new contour
             List<Vector3> newContour = new List<Vector3> { v1, v2 };
             AddContour(newContour);
